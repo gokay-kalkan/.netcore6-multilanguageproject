@@ -1,0 +1,27 @@
+﻿@model blogdeneme.Models.BlogDetailViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+@Model.Content - @Model.Title 
+
+@*<script>
+    var langSelect = document.getElementById("lang-select");
+    var slug = "@Model.Slug";
+    var baseUrl = "@Url.Action("Details", "Blog", new { slug = "", culture = "" })";
+
+    langSelect.onchange = function () {
+        var culture = langSelect.value;
+        var url = baseUrl.replace("slug", slug).replace("culture", culture);
+        $.ajax({
+            type: "GET",
+            url: url,
+            success: function (data) {
+                document.open();
+                document.write(data);
+                document.close();
+            }
+        });
+    }
+
+</script>*@
